@@ -4,3 +4,9 @@ services:
     arguments: ['@default_content_deploy.exporter', '@default_content_deploy.importer', '@default_content_deploy.base']
     tags:
       - { name: drush.command }
+
+  delete_content.commands:
+    class: \Drupal\default_content_deploy\Commands\DeleteContentCommands
+    tags:
+      - { name: drush.command }
+
